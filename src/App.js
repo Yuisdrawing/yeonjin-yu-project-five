@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import { Component } from 'react';
+import Header from './Header.js';
+import DaysOfWeek from './DaysOfWeek.js';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  daysName = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thurs",
+    "Fri",
+    "Sat",
+    "Sunday"
+  ]
+
+  render() {
+    return (
+      <div className="App">
+        
+
+        <Header />
+
+        {this.daysName.map((day) => {
+          return (
+            <DaysOfWeek day={day} />
+          )
+        }
+        )}
+
+      </div>
+    );
+  }
 }
 
 export default App;
