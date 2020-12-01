@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yeonjin-yu-project-five/static/css/main.7adefeba.chunk.css",
+    "main.js": "/yeonjin-yu-project-five/static/js/main.ee6ab709.chunk.js",
+    "main.js.map": "/yeonjin-yu-project-five/static/js/main.ee6ab709.chunk.js.map",
+    "runtime-main.js": "/yeonjin-yu-project-five/static/js/runtime-main.9e15d091.js",
+    "runtime-main.js.map": "/yeonjin-yu-project-five/static/js/runtime-main.9e15d091.js.map",
+    "static/js/2.8e306c60.chunk.js": "/yeonjin-yu-project-five/static/js/2.8e306c60.chunk.js",
+    "static/js/2.8e306c60.chunk.js.map": "/yeonjin-yu-project-five/static/js/2.8e306c60.chunk.js.map",
+    "static/js/3.168ea349.chunk.js": "/yeonjin-yu-project-five/static/js/3.168ea349.chunk.js",
+    "static/js/3.168ea349.chunk.js.map": "/yeonjin-yu-project-five/static/js/3.168ea349.chunk.js.map",
+    "index.html": "/yeonjin-yu-project-five/index.html",
+    "static/css/main.7adefeba.chunk.css.map": "/yeonjin-yu-project-five/static/css/main.7adefeba.chunk.css.map",
+    "static/js/2.8e306c60.chunk.js.LICENSE.txt": "/yeonjin-yu-project-five/static/js/2.8e306c60.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e15d091.js",
+    "static/js/2.8e306c60.chunk.js",
+    "static/css/main.7adefeba.chunk.css",
+    "static/js/main.ee6ab709.chunk.js"
+  ]
+}
