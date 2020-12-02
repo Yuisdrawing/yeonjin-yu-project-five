@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Header from './Header.js';
 import DaysOfWeek from './DaysOfWeek.js';
+import LandingPage from './LandingPage.js';
 import './App.css';
 
 
@@ -10,26 +11,30 @@ class App extends Component {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thurs",
-    "Fri",
-    "Sat",
+    "Thursday",
+    "Friday",
+    "Saturday",
     "Sunday"
   ]
 
   render() {
     return (
       <div className="App">
-        
+
 
         <Header />
+        <LandingPage />
 
-        {this.daysName.map((day) => {
+
+        <div className="Days">
+          {this.daysName.map((day) => {
           return (
             <DaysOfWeek day={day} />
           )
         }
         )}
-
+        </div>
+        
       </div>
     );
   }

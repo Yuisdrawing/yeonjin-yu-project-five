@@ -1,6 +1,109 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+
+/* ///////////////////////////////////////////////////////// */
+
+
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+/* credit:https://gist.github.com/msuchodolski/41c9338f3a732379dc570142826ed76e */
+
+
+
 body {
   background-color: #85e8d4;
+  margin: 0;
 }
+
+header.Sticky {
+  background-color: #21443e;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  padding-top: 7px;
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace;
+  z-index: 10;
+}
+.Sticky a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+main .Texts {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 15rem;
+}
+
+.LandingPage h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.LandingPage h2 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 170px;
+  font-weight: 200;
+  margin: 0;
+}
+
+main .Graphics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+img.Glass {
+  width: 370px;
+}
+
+img.Water {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.Redirect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Redirect p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+}
+
+.Redirect a img {
+  width: 30px;
+}
+
+
+
 
 .DaysOfWeek {
   background-color: #ffffff;
@@ -10,4 +113,133 @@ body {
 
 label {
   display: none;
+}
+
+.Days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.DaysOfWeek {
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 2rem;
+  border: 1px solid #ffffff;
+  border-radius: 90px;
+}
+.DaysOfWeek h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 2rem;
+}
+.Sum {
+  width: 200px;
+  height: 200px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background: rgb(138,126,235);
+  background: linear-gradient(120deg, rgba(138,126,235,1) 0%, rgba(33,92,218,1) 52%);
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: 0.2s;
+}
+.Sum:hover {
+  color: #383838;
+  background: rgb(255,214,232);
+  background: radial-gradient(circle, rgba(255,214,232,1) 0%, rgba(168,208,255,1) 100%);
+}
+
+
+.Sum p:nth-child(1) {
+  margin: 0;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 60px;
+}
+.Sum p:nth-child(2) {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 25px;
+}
+
+input[type=number] {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 230px;
+  padding: 18px 0 12px 0;
+  text-align: center;
+  margin: 0;
+  border: 2px solid #cae3ff;
+  /* border-bottom: 2px solid #555555; */
+  transition: 0.5s;
+}
+input[type=number]:focus {
+  border: 2px solid #7f92ff;
+}
+
+.LogsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.LogButton {
+  font-family: 'Dosis', sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 15%;
+  height: 50px;
+}
+.LogButton:focus {
+  outline: none;
+}
+.AddWater {
+  background-color: #affbc8;
+  border: none;
+  cursor: pointer;
+}
+.RemoveWater {
+  background-color: #ffb5c1;
+  border: none;
+  cursor: pointer;
+}
+
+
+input[type=number]::placeholder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+input[type=number]:focus::placeholder {
+  color: transparent;
+}
+
+
+
+
+/* Removing spinner from input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }

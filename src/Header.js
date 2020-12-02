@@ -4,9 +4,9 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <footer>
-                    <p>Created by Christina Yu</p>
-                </footer>
+                <header className="Sticky">
+                    <a href="https://junocollege.com/">Created by Christina Yu @ Juno College 2020</a>
+                </header>
             </div>
         )
     }
