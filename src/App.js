@@ -26,7 +26,7 @@ class App extends Component {
         <LandingPage />
 
 
-        <div className="Days">
+        <div className="Days" id="loggingPage">
           {this.daysName.map((day) => {
           return (
             <DaysOfWeek day={day} />

@@ -1,6 +1,12 @@
 import { Component } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faMinus } from '@fortawesome/free-solid-svg-icons'
+
+
 class DaysOfWeek extends Component {
+
     render() {
         return (
             <div className="DaysOfWeek">
@@ -13,12 +19,12 @@ class DaysOfWeek extends Component {
 
 
                 <div class="LogsContainer">
-                    <button className="LogButton AddWater">+</button>
+                    <button className="LogButton AddWater"><FontAwesomeIcon icon={faPlus} /></button>
                 <form>
                     <label>Log your water</label>
                     <input type="number" id="logwater" name="logwater" placeholder="Log your water" />
                 </form>
-                <button className="LogButton RemoveWater">-</button>
+                    <button className="LogButton RemoveWater"><FontAwesomeIcon icon={faMinus} /></button>
                 </div>
                 
             </div>
