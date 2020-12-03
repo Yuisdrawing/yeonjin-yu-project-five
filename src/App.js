@@ -8,6 +8,7 @@ import './App.css';
 
 class App extends Component {
 
+  // Setting up the default data
   constructor() {
     super();
     this.state = {
@@ -23,8 +24,6 @@ class App extends Component {
       let dailyWater = [];
 
       for (let propertyKey in firebaseDataObj) {
-        // console.log(propertyKey)
-        // console.log(firebaseDataObj[propertyKey]);
 
         const propertyVal = firebaseDataObj[propertyKey];
 
@@ -59,7 +58,7 @@ class App extends Component {
         <div className="Days" id="loggingPage">
           {this.state.daysTotals.map((entry) => {
           return (
-            <DaysOfWeek day={entry.day} sum={entry.sum} key={entry.id} />
+            <DaysOfWeek day={entry.day} sum={entry.sum} key={entry.id} id={entry.id} />
           )
         }
         )}

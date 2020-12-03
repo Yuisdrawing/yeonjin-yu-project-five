@@ -20,9 +20,9 @@ class LandingPage extends Component {
                         <img className="Glass animate__animated animate__fadeInUp" src={ glass } alt="" />
                     </div>
                 </main>
-                <div className="Redirect animate__animated animate__fadeIn animate__delay-2s">
-                    <p>Track your water intake</p>
-                    <a href="#loggingPage" ><FontAwesomeIcon icon={faChevronDown} /></a>
+                <div className="Redirect">
+                    <p className="animate__animated animate__fadeIn animate__delay-2s">Track your water intake</p>
+                    <a href="#loggingPage"  ><FontAwesomeIcon icon={faChevronDown} /></a>
                 </div>
 
                 

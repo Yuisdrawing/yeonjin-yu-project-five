@@ -17,19 +17,54 @@ class DaysOfWeek extends Component {
         }
     }
 
+
+    handleClearInput = () => {
+        document.getElementById(this.props.id + "_waterLog").reset();
+        this.setState({
+            waterIntake: 0
+        })
+    }
+
+
     handleAdd = (e) => {
         e.preventDefault();
         const dbRef = firebase.database().ref();
 
-        const newData = {
+        const newData = {};
+
+        newData[this.props.id] = {
             Day: this.props.day,
             Sum: this.props.sum + + this.state.waterIntake
         }
 
-        // dbRef.child(this.props.id).update(newData);
-        console.log(dbRef)
+        dbRef.update(newData);
+
+        this.handleClearInput();
     }
+
+
     
+    handleRemove = (e) => {
+        e.preventDefault();
+        const dbRef = firebase.database().ref();
+
+        const newData = {};
+
+        let newSum = this.props.sum - this.state.waterIntake;
+        if (newSum < 0) {
+            newSum = 0;
+        }
+
+        newData[this.props.id] = {
+            Day: this.props.day,
+            Sum: newSum
+        }
+
+        dbRef.update(newData);
+
+        this.handleClearInput();
+    }
+
 
     handleInputChange = (e) => {
         this.setState({
@@ -48,20 +83,17 @@ class DaysOfWeek extends Component {
                 </div>
 
 
-                <div className="LogsContainer">
 
-                    <form>
+                    <form id={this.props.id + "_waterLog"}>
                         <button className="LogButton AddWater" onClick={this.handleAdd}><FontAwesomeIcon icon={faPlus} /></button>
 
                         <label>Log your water</label>
-                        <input type="number" id="logwater" name="logwater" placeholder="Log your water" onChange={this.handleInputChange} />
+                        <input type="number" id="logWater" name="logWater" placeholder="Log your water" onChange={this.handleInputChange} />
 
-                        <button className="LogButton RemoveWater" onClick={this.handleAdd}><FontAwesomeIcon icon={faMinus} /></button>
+                        <button className="LogButton RemoveWater" onClick={this.handleRemove}><FontAwesomeIcon icon={faMinus} /></button>
                     </form>
 
                 </div>
-
-            </div>
         )
     }
 }

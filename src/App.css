@@ -105,8 +105,21 @@ img.Water {
 .Redirect a {
   color: #131313;
   font-size: 50px;
-  margin-bottom: 17rem;
+  margin-bottom: 17rem; 
 }
+
+.Redirect a svg path {
+  animation-name: arrow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; 
+}
+
+@keyframes arrow {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+
 
 
 
@@ -197,7 +210,7 @@ input[type=number]:focus {
   border: 2px solid #7f92ff;
 }
 
-.LogsContainer {
+form {
   display: flex;
   justify-content: center;
   margin-top: 23px;
