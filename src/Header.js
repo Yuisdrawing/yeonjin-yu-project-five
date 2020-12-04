@@ -5,7 +5,7 @@ class Header extends Component {
         return (
             <div>
                 <header className="Sticky">
-                    <a href="https://junocollege.com/">Created by Christina Yu @ Juno College 2020</a>
+                    <a href="https://junocollege.com/"><span>!!! Stay Hydrated !!! Created by Christina Yu @ Juno College 2020 !!! Stay Hydrated !!!</span></a>
                 </header>
             </div>
         )

@@ -38,6 +38,7 @@ header.Sticky {
   height: 30px;
   width: 100%;
   padding-top: 7px;
+  font-size: 15px;
   text-align: center;
   font-family: 'Ubuntu Mono', monospace;
   z-index: 10;
@@ -60,14 +61,14 @@ main .Texts {
   color: #000000;
 }
 
-.LandingPage h1 {
+.Wrapper h1 {
   font-family: 'Dosis', sans-serif;
   font-size: 70px;
   font-weight: 400;
   margin: 0;
 }
 
-.LandingPage h2 {
+.Wrapper h2 {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 170px;
   font-weight: 200;
@@ -108,18 +109,6 @@ img.Water {
   margin-bottom: 17rem; 
 }
 
-.Redirect a svg path {
-  animation-name: arrow;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; 
-}
-
-@keyframes arrow {
-  from {top: 0px;}
-  to {top: 200px;}
-}
-
 
 
 
@@ -143,6 +132,7 @@ label {
   margin-bottom: 2rem;
   border: 2px solid #85e8d4;
   border-radius: 90px;
+  box-shadow: 3px 1px 10px #2aa098;
 }
 .DaysOfWeek h1 {
   font-family: 'Dosis', sans-serif;
@@ -166,6 +156,7 @@ label {
   position: relative;
   z-index: 1;
   transition: 0.2s;
+  box-shadow: 2px 3px 7px #898df5;
 }
 .Sum:hover {
   color: #383838;
@@ -235,27 +226,32 @@ path {
   cursor: pointer;
 } 
 .AddWater {
-  background-color: #92ffb6;
+  /* background-color: rgb(146, 255, 182); */
+  background: linear-gradient(120deg, rgba(183, 255, 68,1) 0%, rgba(146, 255, 182,1) 52%);
   color: #3b3b3b;
   transition: 0.1s;
   border: 1px solid #92ffb6;
   border-radius: 20px 0 0 20px;
+  
 }
 .AddWater:hover {
-  background-color: #00815a;
+  /* background-color: rgb(0, 129, 90); */
+  background: linear-gradient(120deg, rgba(101, 198, 21,1) 0%,  rgba(0, 167, 179,1) 52%);
   border: 1px solid #00815a;
   color: white;
 }
 
 .RemoveWater {
-  background-color: #ffa6b5;
+  background: linear-gradient(120deg, rgb(255, 207, 148) 0%, rgb(255, 171, 185)52%);
+  background-color: rgb(255, 166, 181);
   color: #3b3b3b;
   transition: 0.1s;
   border: 1px solid #ffa6b5;
   border-radius: 0 20px 20px 0;
 }
 .RemoveWater:hover {
-  background-color: #8a0e23;
+  background: linear-gradient(120deg, rgb(255, 127, 77) 0%, rgba(205, 64, 87,1) 52%);
+  /* background-color: #8a0e23; */
   border: 1px solid#8a0e23;
   color: white;
 }
@@ -281,4 +277,180 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .Wrapper h1 {
+    font-size: 50px;
+  }
+  .Wrapper h2 {
+    font-size: 120px;
+  }
+  img.Glass {
+    width: 280px;
+  }
+  img.Water {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 875px) {
+  .Wrapper h1 {
+    font-size: 40px;
+    margin-left: 2rem;
+  }
+  .Wrapper h2 {
+    font-size: 100px;
+    margin-left: 2rem;
+  }
+  img.Glass {
+    width: 180px;
+  }
+  img.Water {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  main .Texts {
+    margin-top: 13rem;
+  }
+  main .Graphics {
+    margin-top: 9rem;
+  }
+  .Redirect {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Replacing the header texts */
+  header.Sticky {
+    height: 50px;
+  }
+  .Sticky a span {
+    display: none;
+  }
+  .Sticky a::before {
+    content: "!!! Stay Hydrated !!!\a Created by Christina Yu @ Juno College 2020";
+    white-space: pre;
+  }
+
+  
+
+  main {
+    flex-direction: column;
+  }
+  main .Texts {
+    margin-top: 10rem;
+  }
+  .Wrapper h1 {
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .Wrapper h2 {
+    font-size: 100px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  img.Glass {
+    width: 190px;
+  }
+  img.Water {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  main .Graphics {
+    margin-top: 2rem;
+  }
+  .Redirect {
+    margin-top: 5rem;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .Days {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .DaysOfWeek {
+    width: 400px;
+    height: 400px;
+    border-radius: 70px;
+  }
+  .DaysOfWeek h1 {
+    font-size: 60px;
+    margin-top: 0.5rem;
+  }
+  .Sum {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+  }
+  .Sum p:nth-child(1) {
+    font-size: 70px;
+  }
+  .LogButton {
+    font-size: 25px;
+    width: 60px;
+  }
+  input[type=number]  {
+    font-size: 20px;
+    padding: 18px 0 13px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  main .Texts {
+    margin-top: 6rem;
+  }
+  .Wrapper h1 {
+    font-size: 40px;
+  }
+  .Wrapper h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 430px) {
+  header.Sticky {
+    font-size: 13px;
+    height: 40px;
+  }
+  .DaysOfWeek {
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+  }
+  .DaysOfWeek h1 {
+    font-size: 45px;
+    margin-top: 0;
+  }
+  .Sum {
+    width: 150px;
+    height: 150px;
+    margin-top: 7px;
+  }
+  .Sum p:nth-child(1) {
+    font-size: 60px;
+  }
+  .Sum p:nth-child(2) {
+    font-size: 23px;
+  }
+  .LogButton {
+    font-size: 23px;
+    width: 50px;
+  }
+  input[type=number]  {
+    font-size: 20px;
+    padding: 12px 0 8px 0;
+    width: 150px;
+  }
 }

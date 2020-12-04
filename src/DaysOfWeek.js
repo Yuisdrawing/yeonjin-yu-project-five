@@ -12,56 +12,54 @@ class DaysOfWeek extends Component {
     constructor() {
         super();
         this.state = {
-
             waterIntake: 0,
         }
     }
 
-
+// Clear the input after pressing add or remove button
     handleClearInput = () => {
-        document.getElementById(this.props.id + "_waterLog").reset();
+        document.getElementById(this.props.id + "_logWater").value="";
         this.setState({
             waterIntake: 0
-        })
+        });
     }
 
-
+// Add button(+):
     handleAdd = (e) => {
         e.preventDefault();
         const dbRef = firebase.database().ref();
-
+        // object where the values will be updated into every time changes are made
         const newData = {};
-
+        // Any changes will be added into the pre-existing value
         newData[this.props.id] = {
             Day: this.props.day,
             Sum: this.props.sum + + this.state.waterIntake
         }
-
+        
         dbRef.update(newData);
-
         this.handleClearInput();
     }
 
 
-    
+// Subtract button (-):
     handleRemove = (e) => {
         e.preventDefault();
         const dbRef = firebase.database().ref();
 
         const newData = {};
-
+        // Any changes will be subtracted from the pre-existing value
         let newSum = this.props.sum - this.state.waterIntake;
+        // If value is larger than 0, it doesn't go down any further
         if (newSum < 0) {
             newSum = 0;
         }
-
+        
         newData[this.props.id] = {
             Day: this.props.day,
             Sum: newSum
         }
 
         dbRef.update(newData);
-
         this.handleClearInput();
     }
 
@@ -69,12 +67,12 @@ class DaysOfWeek extends Component {
     handleInputChange = (e) => {
         this.setState({
             waterIntake: e.target.value
-        })
+        });
     }
 
     render() {
         return (
-            <div className="DaysOfWeek">
+                 <section className="DaysOfWeek">
                 <h1>{this.props.day}</h1>
 
                 <div className="Sum">
@@ -84,16 +82,17 @@ class DaysOfWeek extends Component {
 
 
 
-                    <form id={this.props.id + "_waterLog"}>
+                    <form>
                         <button className="LogButton AddWater" onClick={this.handleAdd}><FontAwesomeIcon icon={faPlus} /></button>
 
                         <label>Log your water</label>
-                        <input type="number" id="logWater" name="logWater" placeholder="Log your water" onChange={this.handleInputChange} />
+                        <input type="number" id={this.props.id + "_logWater"} name="logWater" placeholder="Log your water" onChange={this.handleInputChange} />
 
                         <button className="LogButton RemoveWater" onClick={this.handleRemove}><FontAwesomeIcon icon={faMinus} /></button>
                     </form>
 
-                </div>
+                </section>
+           
         )
     }
 }
