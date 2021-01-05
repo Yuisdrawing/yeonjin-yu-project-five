@@ -21,7 +21,7 @@ class LandingPage extends Component {
                     </aside>
                 </main>
                 <div className="Redirect">
-                    <p className="animate__animated animate__fadeIn animate__delay-2s">Track your water intake</p>
+                    <p className="animate__animated animate__fadeIn animate__delay-2s">Log your water intake</p>
                     <a href="#loggingPage"><FontAwesomeIcon icon={faChevronDown} className="animate__animated animate__fadeIn animate__delay-3s" /></a>
                 </div>
 
